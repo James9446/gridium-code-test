@@ -126,12 +126,12 @@ label.append("<select id=\"knowledge_repo_selection_dropdown\" onchange=\"displa
 var dropdown = $("#knowledge_repo_selection_dropdown");
 dropdown.append("<option disabled selected>Select your knowledge repository!</option>");
 
-for (value in codeAnalysisTools.all)
-    dropdown.append("<option value=\"" + value + "\">" + codeAnalysisTools.keys[value] + "</option>");
+for (value in knowledgeRepos.all)
+    dropdown.append("<option value=\"" + value + "\">" + knowledgeRepos.keys[value] + "</option>");
 
 function displayKnowledgeReposFrom(dropdown)
 {
-  $("#knowledge_repo_selection_output").text(codeAnalysisTools.keys[dropdown.value]);
+  $("#knowledge_repo_selection_output").text(knowledgeRepos.keys[dropdown.value]);
 }
 
 // Original Gridium code
