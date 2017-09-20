@@ -134,6 +134,176 @@ function displayKnowledgeReposFrom(dropdown)
   $("#knowledge_repo_selection_output").text(knowledgeRepos.keys[dropdown.value]);
 }
 
+// Travel Options Selection
+var travelOptions = enumerate("None", "Possible", "Plentiful");
+
+var label = $("#travel_options_selection_label");
+label.append("<select id=\"travel_options_selection_dropdown\" onchange=\"displaytTavelOptionsFrom(this)\"></select>");
+
+var dropdown = $("#travel_options_selection_dropdown");
+dropdown.append("<option disabled selected>Select your travel option!</option>");
+
+for (value in travelOptions.all)
+    dropdown.append("<option value=\"" + value + "\">" + travelOptions.keys[value] + "</option>");
+
+function displaytTavelOptionsFrom(dropdown)
+{
+  $("#travel_options_selection_output").text(travelOptions.keys[dropdown.value]);
+}
+
+// Schedule Options Selection
+var travelOptions = enumerate("Fixed", "Flexible");
+
+var label = $("#schedule_options_selection_label");
+label.append("<select id=\"schedule_options_selection_dropdown\" onchange=\"displayTravelOptionsFrom(this)\"></select>");
+
+var dropdown = $("#schedule_options_selection_dropdown");
+dropdown.append("<option disabled selected>Select your schedule availability!</option>");
+
+for (value in travelOptions.all)
+    dropdown.append("<option value=\"" + value + "\">" + travelOptions.keys[value] + "</option>");
+
+function displayTravelOptionsFrom(dropdown)
+{
+  $("#schedule_options_selection_output").text(travelOptions.keys[dropdown.value]);
+}
+
+// Remote Work Selection Selection
+var remoteWorking = enumerate("No", "Negotiable", "Required");
+
+var label = $("#remote_work_selection_label");
+label.append("<select id=\"remote_work_selection_dropdown\" onchange=\"displayRemoteWorkingFrom(this)\"></select>");
+
+var dropdown = $("#remote_work_selection_dropdown");
+dropdown.append("<option disabled selected>Select your remote work option!</option>");
+
+for (value in remoteWorking.all)
+    dropdown.append("<option value=\"" + value + "\">" + remoteWorking.keys[value] + "</option>");
+
+function displayRemoteWorkingFrom(dropdown)
+{
+  $("#remote_work_selection_output").text(remoteWorking.keys[dropdown.value]);
+}
+
+// Relocation Package Selection
+var relocationPackages = enumerate("Nonealse", "Negotiable");
+
+var label = $("#relocation_package_selection_label");
+label.append("<select id=\"relocation_package_selection_dropdown\" onchange=\"displayRelocationPackagesFrom(this)\"></select>");
+
+var dropdown = $("#relocation_package_selection_dropdown");
+dropdown.append("<option disabled selected>Select your relocation package option!</option>");
+
+for (value in relocationPackages.all)
+    dropdown.append("<option value=\"" + value + "\">" + relocationPackages.keys[value] + "</option>");
+
+function displayRelocationPackagesFrom(dropdown)
+{
+  $("#relocation_package_selection_output").text(relocationPackages.keys[dropdown.value]);
+}
+
+// Operating System Selection
+var operationSystems = enumerate("MacOSX", "CentOS", "Ubuntu", "Windows");
+
+var label = $("#operating_system_selection_label");
+label.append("<select id=\"operating_system_selection_dropdown\" onchange=\"displayOperationSystemsFrom(this)\"></select>");
+
+var dropdown = $("#operating_system_selection_dropdown");
+dropdown.append("<option disabled selected>Select your operating system!</option>");
+
+for (value in operationSystems.all)
+    dropdown.append("<option value=\"" + value + "\">" + operationSystems.keys[value] + "</option>");
+
+function displayOperationSystemsFrom(dropdown)
+{
+  $("#operating_system_selection_output").text(operationSystems.keys[dropdown.value]);
+}
+
+// Machine Type Selection
+var machineType = enumerate("Workstation", "Laptop");
+
+var label = $("#machine_type_selection_label");
+label.append("<select id=\"machine_type_selection_dropdown\" onchange=\"displayMachineTypeFrom(this)\"></select>");
+
+var dropdown = $("#machine_type_selection_dropdown");
+dropdown.append("<option disabled selected>Select your machine type!</option>");
+
+for (value in machineType.all)
+    dropdown.append("<option value=\"" + value + "\">" + machineType.keys[value] + "</option>");
+
+function displayMachineTypeFrom(dropdown)
+{
+  $("#machine_type_selection_output").text(machineType.keys[dropdown.value]);
+}
+
+// Monitors Selection
+var monitors = enumerate("Negotiable");
+
+var label = $("#monitor_selection_label");
+label.append("<select id=\"monitor_selection_dropdown\" onchange=\"displayMonitorsFrom(this)\"></select>");
+
+var dropdown = $("#monitor_selection_dropdown");
+dropdown.append("<option disabled selected>Select your only monitor option!</option>");
+
+for (value in monitors.all)
+    dropdown.append("<option value=\"" + value + "\">" + monitors.keys[value] + "</option>");
+
+function displayMonitorsFrom(dropdown)
+{
+  $("#monitor_selection_output").text(monitors.keys[dropdown.value]);
+}
+
+// Level Selection
+var level = enumerate("Familiar", "Good", "Expert");
+
+var label = $("#level_selection_label");
+label.append("<select id=\"level_selection_dropdown\" onchange=\"displayLevelFrom(this)\"></select>");
+
+var dropdown = $("#level_selection_dropdown");
+dropdown.append("<option disabled selected>Select your level!</option>");
+
+for (value in level.all)
+    dropdown.append("<option value=\"" + value + "\">" + level.keys[value] + "</option>");
+
+function displayLevelFrom(dropdown)
+{
+  $("#level_selection_output").text(level.keys[dropdown.value]);
+}
+
+// Training Type Selection
+var trainingType = enumerate("None", "Informal", "Formal", "External");
+
+var label = $("#training_type_selection_label");
+label.append("<select id=\"training_type_selection_dropdown\" onchange=\"displayTrainingTypeFrom(this)\"></select>");
+
+var dropdown = $("#training_type_selection_dropdown");
+dropdown.append("<option disabled selected>Select your training type!</option>");
+
+for (value in trainingType.all)
+    dropdown.append("<option value=\"" + value + "\">" + trainingType.keys[value] + "</option>");
+
+function displayTrainingTypeFrom(dropdown)
+{
+  $("#training_type_selection_output").text(trainingType.keys[dropdown.value]);
+}
+
+// Paid Time Off Selection
+var paidTimeOff = enumerate("Accrued", "Unlimited");
+
+var label = $("#pto_selection_label");
+label.append("<select id=\"pto_selection_dropdown\" onchange=\"displayPaidTimeOffFrom(this)\"></select>");
+
+var dropdown = $("#pto_selection_dropdown");
+dropdown.append("<option disabled selected>Select your PTO option!</option>");
+
+for (value in paidTimeOff.all)
+    dropdown.append("<option value=\"" + value + "\">" + paidTimeOff.keys[value] + "</option>");
+
+function displayPaidTimeOffFrom(dropdown)
+{
+  $("#pto_selection_output").text(paidTimeOff.keys[dropdown.value]);
+}
+
 // Original Gridium code
 var job = {
 	"headline": "Gridium Front-end Developer",
