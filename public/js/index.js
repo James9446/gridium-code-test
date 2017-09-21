@@ -361,8 +361,6 @@ function displayPaidTimeOffFrom(dropdown)
   console.log(user.pto_answer)
 }
 
-// Compare the user inputs with job requirements 
-var numberOfMatches = 0;
 
 function answerAll() {
   if (user.employment_answer == "") {
@@ -438,15 +436,98 @@ function answerAll() {
     return
   }
   console.log("function is working")
+
+
+  function matchPercent() {
+    var matches = compareUserToJob(numberOfMatches) % 18
+    console.log(matchPercent)
+  }
+  // if (numberOfMatches > 0) {
+  //   var matchPercent = numberOfMatches % 18
+  //   console.log(matchPercent)
+  }
+
+  // console.log(compareUserToJob(numberOfMatches))
+  console.log("function is still working")
+
+
+function compareUserToJob() {
+  if (user.employment_answer == "Permanent") {
+    numberOfMatches ++
+    console.log(numberOfMatches)
+  }
+  if (user.experience_answer == "Junior" || user.experience_answer == "Seasoned") {
+    numberOfMatches ++
+    console.log(numberOfMatches)
+  }
+  if (user.companysize_answer == "TenToTwenty") {
+    numberOfMatches ++
+    console.log(numberOfMatches)
+  }
+  if (user.versioncontrol_answer == "Git") {
+    numberOfMatches ++
+    console.log(numberOfMatches)
+  }
+  if (user.issuetracker_answer == "Tikkit") {
+    numberOfMatches ++
+    console.log(numberOfMatches)
+  }
+  if (user.buildserver_answer == "CircleCI") {
+    numberOfMatches ++
+    console.log(numberOfMatches)
+  }
+  if (user.codeanalysis_answer == "NotYetChosen") {
+    numberOfMatches ++
+    console.log(numberOfMatches)
+  }
+  if (user.knowledgerepo_answer == "GitHubWiki") {
+    numberOfMatches ++
+    console.log(numberOfMatches)
+  }
+  if (user.traveloptions_answer == "Possible" || user.traveloptions_answer == "Plentiful") {
+    numberOfMatches ++
+    console.log(numberOfMatches)
+  }
+  if (user.schedule_answer == "Flexible") {
+    numberOfMatches ++
+    console.log(numberOfMatches)
+  }
+  if (user.remotework_answer == "Negotiable" || user.remotework_answer == "Required") {
+    numberOfMatches ++
+    console.log(numberOfMatches)
+  }
+  if (user.relocation_answer == "Negotiable") {
+    numberOfMatches ++
+    console.log(numberOfMatches)
+  }
+  if (user.operating_system_answer == "MacOSX" || user.operating_system_answer == "CentOS") {
+    numberOfMatches ++
+    console.log(numberOfMatches)
+  }
+  if (user.machine_type_answer == "Laptop") {
+    numberOfMatches ++
+    console.log(numberOfMatches)
+  }
+  if (user.monitor_answer == "Negotiable") {
+    numberOfMatches ++
+    console.log(numberOfMatches)
+  }
+  if (user.level_answer == "Good" || user.level_answer == "Familiar") {
+    numberOfMatches ++
+    console.log(numberOfMatches)
+  }
+  if (user.training_type_answer == "Informal" || user.training_type_answer == "Formal") {
+    numberOfMatches ++
+    console.log(numberOfMatches)
+  }
+  if (user.pto_answer == "Unlimited") {
+    numberOfMatches ++
+    console.log(numberOfMatches)
+  }
 }
 
-// function compareUserToJob() {
-//   if user.employment_answer = "Permanent" {
-//     numberOfMatches + 1
-//     console.log(numberOfMatches)
-//   }
-// }
-
+// Compare the user inputs with job requirements 
+var numberOfMatches = 0;
 
 // Original Gridium code
 var job = {
