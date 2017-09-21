@@ -2,3 +2,52 @@ output {
     display:block;
     font-family:monospace
 }
+
+#employment .modal-content .col-md-5 {
+	margin-top: 3em;
+	margin-bottom: 4em;
+}
+
+#employment button {
+	background-color: #00a1e0;
+	color: #fff;
+	border: none;
+}
+
+#employment button:hover {
+	background-color: #0083c2;
+}
+
+#employment button h2 {
+	vertical-align: middle;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 700;
+    letter-spacing: 0.08em;
+    margin-top: 2em;
+    padding: 0 100px;
+    text-transform: uppercase;
+}
+
+#employment-questions {
+	display: none;
+}
+
+#employment-questions button {
+	background-color: #00a1e0;
+	color: #fff;
+	border: none;
+	vertical-align: middle;
+	color: #fff;
+	font-size: 14px;
+	line-height: 45px;
+	font-weight: 700;
+    letter-spacing: 0.08em;
+    margin-top: 2em;
+    padding: 0 150px;
+    text-transform: uppercase;
+}
+
+#employment-questions button:hover {
+	background-color: #0083c2;
+}

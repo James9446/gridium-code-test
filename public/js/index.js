@@ -356,13 +356,13 @@ for (value in paidTimeOff.all)
 
 function displayPaidTimeOffFrom(dropdown)
 {
-  $("#pto_selection_output").text(paidTimeOff.keys[dropdown.value]);
+  // $("#pto_selection_output").text(paidTimeOff.keys[dropdown.value]);
   user.pto_answer = paidTimeOff.keys[dropdown.value]
-  console.log(user.pto_answer)
+  // console.log(user.pto_answer)
 }
 
 
-function answerAll() {
+function checkAnsweredAll() {
   if (user.employment_answer == "") {
     alert("Please select an employment answer")
     return
@@ -434,6 +434,10 @@ function answerAll() {
   if (user.pto_answer == "") {
     alert("Please select paid time off preference ")
     return
+  }else {
+    compareUserToJob()
+    alert("your match percent is " + numberOfMatches/18)
+    console.log('everything is filled out')
   }
   console.log("function is working")
 
@@ -531,48 +535,48 @@ var numberOfMatches = 0;
 
 // Original Gridium code
 var job = {
-	"headline": "Gridium Front-end Developer",
-	"essentials": {
-		"locations": "denver",
+    "headline": "Gridium Front-end Developer",
+    "essentials": {
+        "locations": "denver",
         "employment": EmploymentType().Permanent,
         "experience": [ExperienceLevels().Junior, ExperienceLevels().Seasoned],
-		"startdate": (new Date()).getTime(),
-		"companysize": CompanySize().TenToTwenty,
-		"teamsize": { "min": 1, "max": 6 },
-	},
-	"methodology": {
-		"codereviews": true,
-		"prototyping": true,
-		"failfast": true,
-		"unittests": true,
-		"integrationtests": true,
-		"buildserver": BuildServers().CircleCI,
-		"staticcodeanalysis": CodeAnalysisTools().NotYetChosen,
-		"versioncontrol": VersionControlSystem().Git,
-		"issuetracker": IssueTrackers().Tikkit,
-		"standups": true,
-		"quickstart": true,
-		"commitondayone": true,
-	},
-	"specs": {
-		"workload": 1.0,
-		"workweek": 40,
+        "startdate": (new Date()).getTime(),
+        "companysize": CompanySize().TenToTwenty,
+        "teamsize": { "min": 1, "max": 6 },
+    },
+    "methodology": {
+        "codereviews": true,
+        "prototyping": true,
+        "failfast": true,
+        "unittests": true,
+        "integrationtests": true,
+        "buildserver": BuildServers().CircleCI,
+        "staticcodeanalysis": CodeAnalysisTools().NotYetChosen,
+        "versioncontrol": VersionControlSystem().Git,
+        "issuetracker": IssueTrackers().Tikkit,
+        "standups": true,
+        "quickstart": true,
+        "commitondayone": true,
+    },
+    "specs": {
+        "workload": 1.0,
+        "workweek": 40,
         "schedule": ScheduleOptions().Flexible,
         "remote": RemoteWorking().Required,
         "pto": PTO().Unlimited
-	},
-	"profile": {
-		"newfeatures": 50,
-		"clientsupport": 9,
-		"documentation": 10,
-		"maintenance": 30,
-		"meetings": 1,
-	},
-	"equipment": {
-		"operatingsystem": [OperationSystems().MacOSX, OperationSystems().CentOS],
-		"computer": MachineType().Laptop,
-	},
-	"technologies": {
+    },
+    "profile": {
+        "newfeatures": 50,
+        "clientsupport": 9,
+        "documentation": 10,
+        "maintenance": 30,
+        "meetings": 1,
+    },
+    "equipment": {
+        "operatingsystem": [OperationSystems().MacOSX, OperationSystems().CentOS],
+        "computer": MachineType().Laptop,
+    },
+    "technologies": {
         "css3": Level().Good,
         "html5": Level().Good,
         "javascript": Level().Good,
@@ -597,10 +601,10 @@ var job = {
         },
         "boardgames": Level().Familiar,
     },
-	"other": [
+    "other": [
         "we love technology",
         "we solve interesting problems"
-	]
+    ]
 }
 
 function EmploymentType() { return enumerate("Permanent", "Temporary", "Project"); }
