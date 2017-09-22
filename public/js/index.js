@@ -19,349 +19,512 @@ var user = {
     pto_answer:""
 }
 
-// Employment type selection
+// ----==== Employment type selection ====----- //
+// Variable for storing enumeration options
 var employmentType = enumerate("Permanent", "Temporary", "Project");
 
+// Targets the specific label that will have this drop-down
 var label = $("#employment_selection_label");
+
+// Drop-down starts with preset text and then appends the user selection by calling display function
 label.append("<select id=\"employment_selection_dropdown\" onchange=\"displayEmploymentFrom(this)\"></select>");
 
+// Stores drop-down value
 var dropdown = $("#employment_selection_dropdown");
+
+// Adds the preset text to the drop-down before selection is made
 dropdown.append("<option disabled selected>Select employment type!</option>");
 
+// Determines the selected value from the drop-down and appneds it to the dropdown variable
 for (value in employmentType.all)
     dropdown.append("<option value=\"" + value + "\">" + employmentType.keys[value] + "</option>");
 
+// Essential display function with dropdown varaible as parameter 
 function displayEmploymentFrom(dropdown)
 {
-  $("#employment_selection_output").text(employmentType.keys[dropdown.value]);
+  // Stores the selected drop-down value in user object
   user.employment_answer = employmentType.keys[dropdown.value]
   console.log(user.employment_answer)
 }
 
-// Employment type selection
+// ----==== Employment type selection ====---- // 
+// Variable for storing enumeration options
 var experienceLevels = enumerate("Junior", "Seasoned", "Lead", "GrayBeard");
 
+// Targets the specific label that will have this drop-down
 var label = $("#experience_selection_label");
+
+// Drop-down starts with preset text and then appends the user selection by calling display function 
 label.append("<select id=\"experience_selection_dropdown\" onchange=\"displayExperienceFrom(this)\"></select>");
 
+// Stores drop-down value
 var dropdown = $("#experience_selection_dropdown");
+
+// Adds the preset text to the drop-down before selection is made
 dropdown.append("<option disabled selected>Select experience level type!</option>");
 
+// Determines the selected value from the drop-down and appneds it to the dropdown variable 
 for (value in experienceLevels.all)
     dropdown.append("<option value=\"" + value + "\">" + experienceLevels.keys[value] + "</option>");
 
+// Essential display function with dropdown varaible as parameter
 function displayExperienceFrom(dropdown)
 {
-  $("#experience_selection_output").text(experienceLevels.keys[dropdown.value]);
+  // Stores the selected drop-down value in user object
   user.experience_answer = experienceLevels.keys[dropdown.value]
   console.log(user.experience_answer)
 }
 
-// Company Size Selection
+// ----==== Company Size Selection ====---- //
+// Variable for storing enumeration options
 var companySize = enumerate("LessThanTen", "TenToTwenty", "TwentyToFifty", "FiftyToTwoHundred", "MoreThanTwoHundred");
 
+// Targets the specific label that will have this drop-down
 var label = $("#company_size_selection_label");
+
+// Drop-down starts with preset text and then appends the user selection by calling display function 
 label.append("<select id=\"company_size_selection_dropdown\" onchange=\"displayCompanySizeFrom(this)\"></select>");
 
+// Stores drop-down value
 var dropdown = $("#company_size_selection_dropdown");
+
+// Adds the preset text to the drop-down before selection is made
 dropdown.append("<option disabled selected>Select desired company size!</option>");
 
+// Determines the selected value from the drop-down and appneds it to the dropdown variable
 for (value in companySize.all)
     dropdown.append("<option value=\"" + value + "\">" + companySize.keys[value] + "</option>");
 
+// Essential display function with dropdown varaible as parameter
 function displayCompanySizeFrom(dropdown)
 {
-  $("#company_size_selection_output").text(companySize.keys[dropdown.value]);
+  // Stores the selected drop-down value in user object
   user.companysize_answer = companySize.keys[dropdown.value]
   console.log(user.companysize_answer)
 }
 
-// Version Control Selection
+// ----==== Version Control Selection ====---- //
+// Variable for storing enumeration options
 var versionControlSystem = enumerate("NotYetChosen", "Git", "BitBucket");
 
+// Targets the specific label that will have this drop-down
 var label = $("#version_control_selection_label");
+
+// Drop-down starts with preset text and then appends the user selection by calling display function
 label.append("<select id=\"version_control_selection_dropdown\" onchange=\"displayVersionControlSystemFrom(this)\"></select>");
 
+// Stores drop-down value
 var dropdown = $("#version_control_selection_dropdown");
+
+// Adds the preset text to the drop-down before selection is made
 dropdown.append("<option disabled selected>Select your VCS!</option>");
 
+// Determines the selected value from the drop-down and appneds it to the dropdown variable
 for (value in versionControlSystem.all)
     dropdown.append("<option value=\"" + value + "\">" + versionControlSystem.keys[value] + "</option>");
 
+// Essential display function with dropdown varaible as parameter
 function displayVersionControlSystemFrom(dropdown)
 {
-  $("#version_control_selection_output").text(versionControlSystem.keys[dropdown.value]);
+  // Stores the selected drop-down value in user object
   user.versioncontrol_answer = versionControlSystem.keys[dropdown.value]
   console.log(user.versioncontrol_answer)
 }
 
-// Issue Tracker Selection
+// ----==== Issue Tracker Selection ====---- //
+// Variable for storing enumeration options
 var issueTrackers = enumerate("NotYetChosen", "GitHub", "Jira", "Tikkit");
 
+// Targets the specific label that will have this drop-down
 var label = $("#issue_tracker_selection_label");
+
+// Drop-down starts with preset text and then appends the user selection by calling display function
 label.append("<select id=\"issue_tracker_selection_dropdown\" onchange=\"displayIssueTrackersFrom(this)\"></select>");
 
+// Stores drop-down value
 var dropdown = $("#issue_tracker_selection_dropdown");
+
+// Adds the preset text to the drop-down before selection is made
 dropdown.append("<option disabled selected>Select your issue tracker!</option>");
 
+// Determines the selected value from the drop-down and appneds it to the dropdown variable
 for (value in issueTrackers.all)
     dropdown.append("<option value=\"" + value + "\">" + issueTrackers.keys[value] + "</option>");
 
+// Essential display function with dropdown varaible as parameter
 function displayIssueTrackersFrom(dropdown)
 {
-  $("#issue_tracker_selection_output").text(issueTrackers.keys[dropdown.value]);
+  // Stores the selected drop-down value in user object
   user.issuetracker_answer = issueTrackers.keys[dropdown.value]
   console.log(user.issuetracker_answer)
 }
 
-// Build Server Selection
+// ----==== Build Server Selection ====---- //
+// Variable for storing enumeration options
 var buildServers = enumerate("NotYetChosen", "Jenkins", "Travis", "Codeship", "CircleCI");
 
+// Targets the specific label that will have this drop-down
 var label = $("#build_server_selection_label");
+
+// Drop-down starts with preset text and then appends the user selection by calling display function
 label.append("<select id=\"build_server_selection_dropdown\" onchange=\"displayBuildServersFrom(this)\"></select>");
 
+// Stores drop-down value
 var dropdown = $("#build_server_selection_dropdown");
+
+// Adds the preset text to the drop-down before selection is made
 dropdown.append("<option disabled selected>Select your build server!</option>");
 
+// Determines the selected value from the drop-down and appneds it to the dropdown variable
 for (value in buildServers.all)
     dropdown.append("<option value=\"" + value + "\">" + buildServers.keys[value] + "</option>");
 
+// Essential display function with dropdown varaible as parameter
 function displayBuildServersFrom(dropdown)
 {
-  $("#build_server_selection_output").text(buildServers.keys[dropdown.value]);
+  // Stores the selected drop-down value in user object
   user.buildserver_answer = buildServers.keys[dropdown.value]
   console.log(user.buildserver_answer)
 }
 
-// Analysis Tool Selection
+// ----==== Analysis Tool Selection ====---- //
+// Variable for storing enumeration options
 var codeAnalysisTools = enumerate("NotYetChosen", "ESLint");
 
+// Targets the specific label that will have this drop-down
 var label = $("#code_analysis_tool_selection_label");
+
+// Drop-down starts with preset text and then appends the user selection by calling display function
 label.append("<select id=\"code_analysis_tool_selection_dropdown\" onchange=\"displayCodeAnalysisToolsFrom(this)\"></select>");
 
+// Stores drop-down value
 var dropdown = $("#code_analysis_tool_selection_dropdown");
+
+// Adds the preset text to the drop-down before selection is made
 dropdown.append("<option disabled selected>Select your code analysis tool!</option>");
 
+// Determines the selected value from the drop-down and appneds it to the dropdown variable
 for (value in codeAnalysisTools.all)
     dropdown.append("<option value=\"" + value + "\">" + codeAnalysisTools.keys[value] + "</option>");
 
+// Essential display function with dropdown varaible as parameter
 function displayCodeAnalysisToolsFrom(dropdown)
 {
-  $("#code_analysis_tool_selection_output").text(codeAnalysisTools.keys[dropdown.value]);
+  // Stores the selected drop-down value in user object
   user.codeanalysis_answer = codeAnalysisTools.keys[dropdown.value]
   console.log(user.codeanalysis_answer)
 }
 
-// Knowledge Repository Selection
+// ----==== Knowledge Repository Selection ====---- //
+// Variable for storing enumeration options
 var knowledgeRepos = enumerate("NotYetChosen", "GitHubWiki", "Confluence");
 
+// Targets the specific label that will have this drop-down
 var label = $("#knowledge_repo_selection_label");
+
+// Drop-down starts with preset text and then appends the user selection by calling display function
 label.append("<select id=\"knowledge_repo_selection_dropdown\" onchange=\"displayKnowledgeReposFrom(this)\"></select>");
 
+// Stores drop-down value
 var dropdown = $("#knowledge_repo_selection_dropdown");
+
+// Adds the preset text to the drop-down before selection is made
 dropdown.append("<option disabled selected>Select your knowledge repository!</option>");
 
+// Determines the selected value from the drop-down and appneds it to the dropdown variable
 for (value in knowledgeRepos.all)
     dropdown.append("<option value=\"" + value + "\">" + knowledgeRepos.keys[value] + "</option>");
 
+// Essential display function with dropdown varaible as parameter
 function displayKnowledgeReposFrom(dropdown)
 {
-  $("#knowledge_repo_selection_output").text(knowledgeRepos.keys[dropdown.value]);
+  // Stores the selected drop-down value in user object
   user.knowledgerepo_answer = knowledgeRepos.keys[dropdown.value]
   console.log(user.knowledgerepo_answer)
 }
 
-// Travel Options Selection
+// ----==== Travel Options Selection ====---- // 
+// Variable for storing enumeration options
 var travelOptions = enumerate("None", "Possible", "Plentiful");
 
+// Targets the specific label that will have this drop-down
 var label = $("#travel_options_selection_label");
+
+// Drop-down starts with preset text and then appends the user selection by calling display function
 label.append("<select id=\"travel_options_selection_dropdown\" onchange=\"displaytTavelOptionsFrom(this)\"></select>");
 
+// Stores drop-down value
 var dropdown = $("#travel_options_selection_dropdown");
+
+// Adds the preset text to the drop-down before selection is made
 dropdown.append("<option disabled selected>Select your travel option!</option>");
 
+// Determines the selected value from the drop-down and appneds it to the dropdown variable
 for (value in travelOptions.all)
     dropdown.append("<option value=\"" + value + "\">" + travelOptions.keys[value] + "</option>");
 
+// Essential display function with dropdown varaible as parameter
 function displaytTavelOptionsFrom(dropdown)
 {
-  $("#travel_options_selection_output").text(travelOptions.keys[dropdown.value]);
+  // Stores the selected drop-down value in user object
   user.traveloptions_answer = travelOptions.keys[dropdown.value]
   console.log(user.traveloptions_answer)
 }
 
-// Schedule Options Selection
+// ----==== Schedule Options Selection ====---- //
+// Variable for storing enumeration options
 var scheduleOptions = enumerate("Fixed", "Flexible");
 
+// Targets the specific label that will have this drop-down
 var label = $("#schedule_options_selection_label");
+
+// Drop-down starts with preset text and then appends the user selection by calling display function
 label.append("<select id=\"schedule_options_selection_dropdown\" onchange=\"displayScheduleOptionsFrom(this)\"></select>");
 
+// Stores drop-down value
 var dropdown = $("#schedule_options_selection_dropdown");
+
+// Adds the preset text to the drop-down before selection is made
 dropdown.append("<option disabled selected>Select your schedule availability!</option>");
 
+// Determines the selected value from the drop-down and appneds it to the dropdown variable
 for (value in scheduleOptions.all)
     dropdown.append("<option value=\"" + value + "\">" + scheduleOptions.keys[value] + "</option>");
 
+// Essential display function with dropdown varaible as parameter
 function displayScheduleOptionsFrom(dropdown)
 {
-  $("#schedule_options_selection_output").text(scheduleOptions.keys[dropdown.value]);
+  // Stores the selected drop-down value in user object
   user.schedule_answer = scheduleOptions.keys[dropdown.value]
   console.log(user.schedule_answer)
 }
 
-// Remote Work Selection Selection
+// ----==== Remote Work Selection Selection ====---- //
+// Variable for storing enumeration options
 var remoteWorking = enumerate("No", "Negotiable", "Required");
 
+// Targets the specific label that will have this drop-down
 var label = $("#remote_work_selection_label");
+
+// Drop-down starts with preset text and then appends the user selection by calling display function
 label.append("<select id=\"remote_work_selection_dropdown\" onchange=\"displayRemoteWorkingFrom(this)\"></select>");
 
+// Stores drop-down value
 var dropdown = $("#remote_work_selection_dropdown");
+
+// Adds the preset text to the drop-down before selection is made
 dropdown.append("<option disabled selected>Select your remote work option!</option>");
 
+// Determines the selected value from the drop-down and appneds it to the dropdown variable
 for (value in remoteWorking.all)
     dropdown.append("<option value=\"" + value + "\">" + remoteWorking.keys[value] + "</option>");
 
+// Essential display function with dropdown varaible as parameter
 function displayRemoteWorkingFrom(dropdown)
 {
-  $("#remote_work_selection_output").text(remoteWorking.keys[dropdown.value]);
+  // Stores the selected drop-down value in user object
   user.remotework_answer = remoteWorking.keys[dropdown.value]
   console.log(user.remotework_answer)
 }
 
-// Relocation Package Selection
+// ----==== Relocation Package Selection ====---- // 
+// Variable for storing enumeration options
 var relocationPackages = enumerate("Nonealse", "Negotiable");
 
+// Targets the specific label that will have this drop-down
 var label = $("#relocation_package_selection_label");
+
+// Drop-down starts with preset text and then appends the user selection by calling display function
 label.append("<select id=\"relocation_package_selection_dropdown\" onchange=\"displayRelocationPackagesFrom(this)\"></select>");
 
+// Stores drop-down value
 var dropdown = $("#relocation_package_selection_dropdown");
+
+// Adds the preset text to the drop-down before selection is made
 dropdown.append("<option disabled selected>Select your relocation package option!</option>");
 
+// Determines the selected value from the drop-down and appneds it to the dropdown variable
 for (value in relocationPackages.all)
     dropdown.append("<option value=\"" + value + "\">" + relocationPackages.keys[value] + "</option>");
 
+// Essential display function with dropdown varaible as parameter
 function displayRelocationPackagesFrom(dropdown)
 {
-  $("#relocation_package_selection_output").text(relocationPackages.keys[dropdown.value]);
+  // Stores the selected drop-down value in user object
   user.relocation_answer = relocationPackages.keys[dropdown.value]
   console.log(user.relocation_answer)
 }
 
-// Operating System Selection
+// ----==== Operating System Selection ====---- // 
+// Variable for storing enumeration options
 var operationSystems = enumerate("MacOSX", "CentOS", "Ubuntu", "Windows");
 
+// Targets the specific label that will have this drop-down
 var label = $("#operating_system_selection_label");
+
+// Drop-down starts with preset text and then appends the user selection by calling display function
 label.append("<select id=\"operating_system_selection_dropdown\" onchange=\"displayOperationSystemsFrom(this)\"></select>");
 
+// Stores drop-down value
 var dropdown = $("#operating_system_selection_dropdown");
+
+// Adds the preset text to the drop-down before selection is made
 dropdown.append("<option disabled selected>Select your operating system!</option>");
 
+// Determines the selected value from the drop-down and appneds it to the dropdown variable
 for (value in operationSystems.all)
     dropdown.append("<option value=\"" + value + "\">" + operationSystems.keys[value] + "</option>");
 
+// Essential display function with dropdown varaible as parameter
 function displayOperationSystemsFrom(dropdown)
 {
-  $("#operating_system_selection_output").text(operationSystems.keys[dropdown.value]);
+  // Stores the selected drop-down value in user object
   user.operating_system_answer = operationSystems.keys[dropdown.value]
   console.log(user.operating_system_answer)
 }
 
-// Machine Type Selection
+// ----==== Machine Type Selection ====---- // 
+// Variable for storing enumeration options
 var machineType = enumerate("Workstation", "Laptop");
 
+// Targets the specific label that will have this drop-down
 var label = $("#machine_type_selection_label");
+
+// Drop-down starts with preset text and then appends the user selection by calling display function
 label.append("<select id=\"machine_type_selection_dropdown\" onchange=\"displayMachineTypeFrom(this)\"></select>");
 
+// Stores drop-down value
 var dropdown = $("#machine_type_selection_dropdown");
+
+// Adds the preset text to the drop-down before selection is made
 dropdown.append("<option disabled selected>Select your machine type!</option>");
 
+// Determines the selected value from the drop-down and appneds it to the dropdown variable
 for (value in machineType.all)
     dropdown.append("<option value=\"" + value + "\">" + machineType.keys[value] + "</option>");
 
+// Essential display function with dropdown varaible as parameter
 function displayMachineTypeFrom(dropdown)
 {
-  $("#machine_type_selection_output").text(machineType.keys[dropdown.value]);
+  // Stores the selected drop-down value in user object
   user.machine_type_answer = machineType.keys[dropdown.value]
   console.log(user.machine_type_answer)
 }
 
-// Monitors Selection
+// ----==== Monitors Selection ====---- //
+// Variable for storing enumeration options
 var monitors = enumerate("Negotiable");
 
+// Targets the specific label that will have this drop-down
 var label = $("#monitor_selection_label");
+
+// Drop-down starts with preset text and then appends the user selection by calling display function
 label.append("<select id=\"monitor_selection_dropdown\" onchange=\"displayMonitorsFrom(this)\"></select>");
 
+// Stores drop-down value
 var dropdown = $("#monitor_selection_dropdown");
+
+// Adds the preset text to the drop-down before selection is made
 dropdown.append("<option disabled selected>Select your only monitor option!</option>");
 
+// Determines the selected value from the drop-down and appneds it to the dropdown variable
 for (value in monitors.all)
     dropdown.append("<option value=\"" + value + "\">" + monitors.keys[value] + "</option>");
 
+// Essential display function with dropdown varaible as parameter
 function displayMonitorsFrom(dropdown)
 {
-  $("#monitor_selection_output").text(monitors.keys[dropdown.value]);
+  // Stores the selected drop-down value in user object
   user.monitor_answer = monitors.keys[dropdown.value]
   console.log(user.monitor_answer)
 }
 
-// Level Selection
+// ----==== Level Selection ====---- //
+// Variable for storing enumeration options
 var level = enumerate("Familiar", "Good", "Expert");
 
+// Targets the specific label that will have this drop-down
 var label = $("#level_selection_label");
+
+// Drop-down starts with preset text and then appends the user selection by calling display function
 label.append("<select id=\"level_selection_dropdown\" onchange=\"displayLevelFrom(this)\"></select>");
 
+// Stores drop-down value
 var dropdown = $("#level_selection_dropdown");
+
+// Adds the preset text to the drop-down before selection is made
 dropdown.append("<option disabled selected>Select your level!</option>");
 
+// Determines the selected value from the drop-down and appneds it to the dropdown variable
 for (value in level.all)
     dropdown.append("<option value=\"" + value + "\">" + level.keys[value] + "</option>");
 
+// Essential display function with dropdown varaible as parameter
 function displayLevelFrom(dropdown)
 {
-  $("#level_selection_output").text(level.keys[dropdown.value]);
+  // Stores the selected drop-down value in user object
   user.level_answer = level.keys[dropdown.value]
   console.log(user.level_answer)
 }
 
-// Training Type Selection
+// ----==== Training Type Selection ====---- //
+// Variable for storing enumeration options
 var trainingType = enumerate("None", "Informal", "Formal", "External");
 
+// Targets the specific label that will have this drop-down
 var label = $("#training_type_selection_label");
+
+// Drop-down starts with preset text and then appends the user selection by calling display function
 label.append("<select id=\"training_type_selection_dropdown\" onchange=\"displayTrainingTypeFrom(this)\"></select>");
 
+// Stores drop-down value
 var dropdown = $("#training_type_selection_dropdown");
+
+// Adds the preset text to the drop-down before selection is made
 dropdown.append("<option disabled selected>Select your training type!</option>");
 
+// Determines the selected value from the drop-down and appneds it to the dropdown variable
 for (value in trainingType.all)
     dropdown.append("<option value=\"" + value + "\">" + trainingType.keys[value] + "</option>");
 
+// Essential display function with dropdown varaible as parameter
 function displayTrainingTypeFrom(dropdown)
 {
-  $("#training_type_selection_output").text(trainingType.keys[dropdown.value]);
+  // Stores the selected drop-down value in user object
   user.training_type_answer = trainingType.keys[dropdown.value]
   console.log(user.training_type_answer)
 }
 
-// Paid Time Off Selection
+// ----==== Paid Time Off Selection ====---- //
+// Variable for storing enumeration options
 var paidTimeOff = enumerate("Accrued", "Unlimited");
 
+// Targets the specific label that will have this drop-down
 var label = $("#pto_selection_label");
+
+// Drop-down starts with preset text and then appends the user selection by calling display function
 label.append("<select id=\"pto_selection_dropdown\" onchange=\"displayPaidTimeOffFrom(this)\"></select>");
 
+// Stores drop-down value
 var dropdown = $("#pto_selection_dropdown");
+
+// Adds the preset text to the drop-down before selection is made
 dropdown.append("<option disabled selected>Select your PTO option!</option>");
 
+// Determines the selected value from the drop-down and appneds it to the dropdown variable
 for (value in paidTimeOff.all)
     dropdown.append("<option value=\"" + value + "\">" + paidTimeOff.keys[value] + "</option>");
 
+// Essential display function with dropdown varaible as parameter
 function displayPaidTimeOffFrom(dropdown)
 {
-  // $("#pto_selection_output").text(paidTimeOff.keys[dropdown.value]);
+  // Stores the selected drop-down value in user object
   user.pto_answer = paidTimeOff.keys[dropdown.value]
-  // console.log(user.pto_answer)
+  console.log(user.pto_answer)
 }
 
-
+// This function is designed to make sure that every drop-down has been answered. 
+// Rather than use a simple loop with a blanket alert message I made a bunch of if statements so I could create a unique message that specifies which drop-down wasn't selected
 function checkAnsweredAll() {
   if (user.employment_answer == "") {
     alert("Please select an employment answer")
@@ -455,6 +618,7 @@ function checkAnsweredAll() {
   console.log("function is still working")
 
 
+//This function is designed to determine if the selected answers match prerequisites for the position
 function compareUserToJob() {
   if (user.employment_answer == "Permanent") {
     numberOfMatches ++
@@ -530,7 +694,7 @@ function compareUserToJob() {
   }
 }
 
-// Compare the user inputs with job requirements 
+// Variable for storing the number of selected drop-down answers that match 
 var numberOfMatches = 0;
 
 // Original Gridium code
@@ -628,19 +792,3 @@ function PTO() { return enumerate("Accrued", "Unlimited") }
 
 // https://github.com/RougeWare/Micro-JS-Enum/tree/master/lib
 function enumerate() { v=arguments;s={all:[],keys:v};for(i=v.length;i--;)s[v[i]]=s.all[i]=v[i];return s };
-
-
-
-// var user = {
-//     employment_answer:
-//     experience_answer:
-//     companysize_answer:
-//     versioncontrol_answer:
-//     issuetracker_answer:
-//     buildserver_answer:
-//     codeanalysis_answer:
-//     knowledgerepo_answer:
-//     traveloptions_answer:
-//     schedule_answer:
-//     remotework_answer:
-// }
