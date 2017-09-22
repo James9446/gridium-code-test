@@ -1,3 +1,6 @@
+// Hey Nick! I hope you like my project! Let me know if you have any questions. james9446@gmail.com
+
+// Object for storing user answers
 var user = {
     employment_answer:"", 
     experience_answer:"",
@@ -44,7 +47,6 @@ function displayEmploymentFrom(dropdown)
 {
   // Stores the selected drop-down value in user object
   user.employment_answer = employmentType.keys[dropdown.value]
-  console.log(user.employment_answer)
 }
 
 // ----==== Employment type selection ====---- // 
@@ -72,7 +74,6 @@ function displayExperienceFrom(dropdown)
 {
   // Stores the selected drop-down value in user object
   user.experience_answer = experienceLevels.keys[dropdown.value]
-  console.log(user.experience_answer)
 }
 
 // ----==== Company Size Selection ====---- //
@@ -100,7 +101,6 @@ function displayCompanySizeFrom(dropdown)
 {
   // Stores the selected drop-down value in user object
   user.companysize_answer = companySize.keys[dropdown.value]
-  console.log(user.companysize_answer)
 }
 
 // ----==== Version Control Selection ====---- //
@@ -128,7 +128,6 @@ function displayVersionControlSystemFrom(dropdown)
 {
   // Stores the selected drop-down value in user object
   user.versioncontrol_answer = versionControlSystem.keys[dropdown.value]
-  console.log(user.versioncontrol_answer)
 }
 
 // ----==== Issue Tracker Selection ====---- //
@@ -156,7 +155,6 @@ function displayIssueTrackersFrom(dropdown)
 {
   // Stores the selected drop-down value in user object
   user.issuetracker_answer = issueTrackers.keys[dropdown.value]
-  console.log(user.issuetracker_answer)
 }
 
 // ----==== Build Server Selection ====---- //
@@ -184,7 +182,6 @@ function displayBuildServersFrom(dropdown)
 {
   // Stores the selected drop-down value in user object
   user.buildserver_answer = buildServers.keys[dropdown.value]
-  console.log(user.buildserver_answer)
 }
 
 // ----==== Analysis Tool Selection ====---- //
@@ -212,7 +209,6 @@ function displayCodeAnalysisToolsFrom(dropdown)
 {
   // Stores the selected drop-down value in user object
   user.codeanalysis_answer = codeAnalysisTools.keys[dropdown.value]
-  console.log(user.codeanalysis_answer)
 }
 
 // ----==== Knowledge Repository Selection ====---- //
@@ -240,7 +236,6 @@ function displayKnowledgeReposFrom(dropdown)
 {
   // Stores the selected drop-down value in user object
   user.knowledgerepo_answer = knowledgeRepos.keys[dropdown.value]
-  console.log(user.knowledgerepo_answer)
 }
 
 // ----==== Travel Options Selection ====---- // 
@@ -268,7 +263,6 @@ function displaytTavelOptionsFrom(dropdown)
 {
   // Stores the selected drop-down value in user object
   user.traveloptions_answer = travelOptions.keys[dropdown.value]
-  console.log(user.traveloptions_answer)
 }
 
 // ----==== Schedule Options Selection ====---- //
@@ -296,7 +290,6 @@ function displayScheduleOptionsFrom(dropdown)
 {
   // Stores the selected drop-down value in user object
   user.schedule_answer = scheduleOptions.keys[dropdown.value]
-  console.log(user.schedule_answer)
 }
 
 // ----==== Remote Work Selection Selection ====---- //
@@ -324,35 +317,6 @@ function displayRemoteWorkingFrom(dropdown)
 {
   // Stores the selected drop-down value in user object
   user.remotework_answer = remoteWorking.keys[dropdown.value]
-  console.log(user.remotework_answer)
-}
-
-// ----==== Relocation Package Selection ====---- // 
-// Variable for storing enumeration options
-var relocationPackages = enumerate("Nonealse", "Negotiable");
-
-// Targets the specific label that will have this drop-down
-var label = $("#relocation_package_selection_label");
-
-// Drop-down starts with preset text and then appends the user selection by calling display function
-label.append("<select id=\"relocation_package_selection_dropdown\" onchange=\"displayRelocationPackagesFrom(this)\"></select>");
-
-// Variable for storing drop-down value
-var dropdown = $("#relocation_package_selection_dropdown");
-
-// Adds the preset text to the drop-down before selection is made
-dropdown.append("<option disabled selected>Select your relocation package option!</option>");
-
-// Determines the user selected value from the drop-down and appends it to the dropdown variable
-for (value in relocationPackages.all)
-    dropdown.append("<option value=\"" + value + "\">" + relocationPackages.keys[value] + "</option>");
-
-// Essential display function with dropdown varaible as parameter
-function displayRelocationPackagesFrom(dropdown)
-{
-  // Stores the selected drop-down value in user object
-  user.relocation_answer = relocationPackages.keys[dropdown.value]
-  console.log(user.relocation_answer)
 }
 
 // ----==== Operating System Selection ====---- // 
@@ -380,7 +344,6 @@ function displayOperationSystemsFrom(dropdown)
 {
   // Stores the selected drop-down value in user object
   user.operating_system_answer = operationSystems.keys[dropdown.value]
-  console.log(user.operating_system_answer)
 }
 
 // ----==== Machine Type Selection ====---- // 
@@ -408,63 +371,6 @@ function displayMachineTypeFrom(dropdown)
 {
   // Stores the selected drop-down value in user object
   user.machine_type_answer = machineType.keys[dropdown.value]
-  console.log(user.machine_type_answer)
-}
-
-// ----==== Monitors Selection ====---- //
-// Variable for storing enumeration options
-var monitors = enumerate("Negotiable");
-
-// Targets the specific label that will have this drop-down
-var label = $("#monitor_selection_label");
-
-// Drop-down starts with preset text and then appends the user selection by calling display function
-label.append("<select id=\"monitor_selection_dropdown\" onchange=\"displayMonitorsFrom(this)\"></select>");
-
-// Variable for storing drop-down value
-var dropdown = $("#monitor_selection_dropdown");
-
-// Adds the preset text to the drop-down before selection is made
-dropdown.append("<option disabled selected>Select your only monitor option!</option>");
-
-// Determines the user selected value from the drop-down and appends it to the dropdown variable
-for (value in monitors.all)
-    dropdown.append("<option value=\"" + value + "\">" + monitors.keys[value] + "</option>");
-
-// Essential display function with dropdown varaible as parameter
-function displayMonitorsFrom(dropdown)
-{
-  // Stores the selected drop-down value in user object
-  user.monitor_answer = monitors.keys[dropdown.value]
-  console.log(user.monitor_answer)
-}
-
-// ----==== Level Selection ====---- //
-// Variable for storing enumeration options
-var level = enumerate("Familiar", "Good", "Expert");
-
-// Targets the specific label that will have this drop-down
-var label = $("#level_selection_label");
-
-// Drop-down starts with preset text and then appends the user selection by calling display function
-label.append("<select id=\"level_selection_dropdown\" onchange=\"displayLevelFrom(this)\"></select>");
-
-// Variable for storing drop-down value
-var dropdown = $("#level_selection_dropdown");
-
-// Adds the preset text to the drop-down before selection is made
-dropdown.append("<option disabled selected>Select your level!</option>");
-
-// Determines the user selected value from the drop-down and appends it to the dropdown variable
-for (value in level.all)
-    dropdown.append("<option value=\"" + value + "\">" + level.keys[value] + "</option>");
-
-// Essential display function with dropdown varaible as parameter
-function displayLevelFrom(dropdown)
-{
-  // Stores the selected drop-down value in user object
-  user.level_answer = level.keys[dropdown.value]
-  console.log(user.level_answer)
 }
 
 // ----==== Training Type Selection ====---- //
@@ -492,7 +398,6 @@ function displayTrainingTypeFrom(dropdown)
 {
   // Stores the selected drop-down value in user object
   user.training_type_answer = trainingType.keys[dropdown.value]
-  console.log(user.training_type_answer)
 }
 
 // ----==== Paid Time Off Selection ====---- //
@@ -520,7 +425,6 @@ function displayPaidTimeOffFrom(dropdown)
 {
   // Stores the selected drop-down value in user object
   user.pto_answer = paidTimeOff.keys[dropdown.value]
-  console.log(user.pto_answer)
 }
 
 // This function is designed to make sure that every drop-down has been answered. 
@@ -570,10 +474,6 @@ function checkAnswers() {
     alert("Please select an remote work preference")
     return
   } 
-  if (user.relocation_answer == "") {
-    alert("Please select relocation preference")
-    return
-  }
   if (user.operating_system_answer == "") {
     alert("Please select operating system")
     return
@@ -581,15 +481,7 @@ function checkAnswers() {
   if (user.machine_type_answer == "") {
     alert("Please select machine type")
     return
-  } 
-  if (user.monitor_answer == "") {
-    alert("Please select monitor preference")
-    return
-  } 
-  if (user.level_answer == "") {
-    alert("Please select level")
-    return
-  } 
+  }  
   if (user.training_type_answer == "") {
     alert("Please select training type")
     return
@@ -598,14 +490,18 @@ function checkAnswers() {
     alert("Please select paid time off preference ")
     return
   }else {
+
+    // This will convert the matchPercent into a more readable string
     compareUserToJob()
-    matchPercent = (numberOfMatches/18);
+    matchPercent = (numberOfMatches/15);
     matchPercent = matchPercent.toString();
     var a = matchPercent.split(".");
     matchPercent = a[1];
     matchPercent = matchPercent.substr(0, 4);
     matchPercent = (matchPercent / 100) + "%";
     console.log(matchPercent)
+
+    // Here is where the user gets the results of whether the users needs jibe with the company needs
     if (parseInt(matchPercent) > 80) {
 
       // Using an alert is obviously not the most elegant solution. 
@@ -627,7 +523,7 @@ function checkAnswers() {
       alert("Hmm. You are a " + matchPercent + " match for our front-end developer job at Gridium. Pehaps you should consider whether this would be the best fit for your needs.")
       numberOfMatches = 0;
       return
-    }
+    } 
   }
 }
 
