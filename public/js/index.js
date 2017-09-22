@@ -29,13 +29,13 @@ var label = $("#employment_selection_label");
 // Drop-down starts with preset text and then appends the user selection by calling display function
 label.append("<select id=\"employment_selection_dropdown\" onchange=\"displayEmploymentFrom(this)\"></select>");
 
-// Stores drop-down value
+// Variable for storing drop-down value
 var dropdown = $("#employment_selection_dropdown");
 
 // Adds the preset text to the drop-down before selection is made
 dropdown.append("<option disabled selected>Select employment type!</option>");
 
-// Determines the selected value from the drop-down and appneds it to the dropdown variable
+// Determines the user selected value from the drop-down and appends it to the dropdown variable
 for (value in employmentType.all)
     dropdown.append("<option value=\"" + value + "\">" + employmentType.keys[value] + "</option>");
 
@@ -57,13 +57,13 @@ var label = $("#experience_selection_label");
 // Drop-down starts with preset text and then appends the user selection by calling display function 
 label.append("<select id=\"experience_selection_dropdown\" onchange=\"displayExperienceFrom(this)\"></select>");
 
-// Stores drop-down value
+// Variable for storing drop-down value
 var dropdown = $("#experience_selection_dropdown");
 
 // Adds the preset text to the drop-down before selection is made
 dropdown.append("<option disabled selected>Select experience level type!</option>");
 
-// Determines the selected value from the drop-down and appneds it to the dropdown variable 
+// Determines the user selected value from the drop-down and appends it to the dropdown variable 
 for (value in experienceLevels.all)
     dropdown.append("<option value=\"" + value + "\">" + experienceLevels.keys[value] + "</option>");
 
@@ -85,13 +85,13 @@ var label = $("#company_size_selection_label");
 // Drop-down starts with preset text and then appends the user selection by calling display function 
 label.append("<select id=\"company_size_selection_dropdown\" onchange=\"displayCompanySizeFrom(this)\"></select>");
 
-// Stores drop-down value
+// Variable for storing drop-down value
 var dropdown = $("#company_size_selection_dropdown");
 
 // Adds the preset text to the drop-down before selection is made
 dropdown.append("<option disabled selected>Select desired company size!</option>");
 
-// Determines the selected value from the drop-down and appneds it to the dropdown variable
+// Determines the user selected value from the drop-down and appends it to the dropdown variable
 for (value in companySize.all)
     dropdown.append("<option value=\"" + value + "\">" + companySize.keys[value] + "</option>");
 
@@ -113,13 +113,13 @@ var label = $("#version_control_selection_label");
 // Drop-down starts with preset text and then appends the user selection by calling display function
 label.append("<select id=\"version_control_selection_dropdown\" onchange=\"displayVersionControlSystemFrom(this)\"></select>");
 
-// Stores drop-down value
+// Variable for storing drop-down value
 var dropdown = $("#version_control_selection_dropdown");
 
 // Adds the preset text to the drop-down before selection is made
 dropdown.append("<option disabled selected>Select your VCS!</option>");
 
-// Determines the selected value from the drop-down and appneds it to the dropdown variable
+// Determines the user selected value from the drop-down and appends it to the dropdown variable
 for (value in versionControlSystem.all)
     dropdown.append("<option value=\"" + value + "\">" + versionControlSystem.keys[value] + "</option>");
 
@@ -141,13 +141,13 @@ var label = $("#issue_tracker_selection_label");
 // Drop-down starts with preset text and then appends the user selection by calling display function
 label.append("<select id=\"issue_tracker_selection_dropdown\" onchange=\"displayIssueTrackersFrom(this)\"></select>");
 
-// Stores drop-down value
+// Variable for storing drop-down value
 var dropdown = $("#issue_tracker_selection_dropdown");
 
 // Adds the preset text to the drop-down before selection is made
 dropdown.append("<option disabled selected>Select your issue tracker!</option>");
 
-// Determines the selected value from the drop-down and appneds it to the dropdown variable
+// Determines the user selected value from the drop-down and appends it to the dropdown variable
 for (value in issueTrackers.all)
     dropdown.append("<option value=\"" + value + "\">" + issueTrackers.keys[value] + "</option>");
 
@@ -169,13 +169,13 @@ var label = $("#build_server_selection_label");
 // Drop-down starts with preset text and then appends the user selection by calling display function
 label.append("<select id=\"build_server_selection_dropdown\" onchange=\"displayBuildServersFrom(this)\"></select>");
 
-// Stores drop-down value
+// Variable for storing drop-down value
 var dropdown = $("#build_server_selection_dropdown");
 
 // Adds the preset text to the drop-down before selection is made
 dropdown.append("<option disabled selected>Select your build server!</option>");
 
-// Determines the selected value from the drop-down and appneds it to the dropdown variable
+// Determines the user selected value from the drop-down and appends it to the dropdown variable
 for (value in buildServers.all)
     dropdown.append("<option value=\"" + value + "\">" + buildServers.keys[value] + "</option>");
 
@@ -197,13 +197,13 @@ var label = $("#code_analysis_tool_selection_label");
 // Drop-down starts with preset text and then appends the user selection by calling display function
 label.append("<select id=\"code_analysis_tool_selection_dropdown\" onchange=\"displayCodeAnalysisToolsFrom(this)\"></select>");
 
-// Stores drop-down value
+// Variable for storing drop-down value
 var dropdown = $("#code_analysis_tool_selection_dropdown");
 
 // Adds the preset text to the drop-down before selection is made
 dropdown.append("<option disabled selected>Select your code analysis tool!</option>");
 
-// Determines the selected value from the drop-down and appneds it to the dropdown variable
+// Determines the user selected value from the drop-down and appends it to the dropdown variable
 for (value in codeAnalysisTools.all)
     dropdown.append("<option value=\"" + value + "\">" + codeAnalysisTools.keys[value] + "</option>");
 
@@ -225,13 +225,13 @@ var label = $("#knowledge_repo_selection_label");
 // Drop-down starts with preset text and then appends the user selection by calling display function
 label.append("<select id=\"knowledge_repo_selection_dropdown\" onchange=\"displayKnowledgeReposFrom(this)\"></select>");
 
-// Stores drop-down value
+// Variable for storing drop-down value
 var dropdown = $("#knowledge_repo_selection_dropdown");
 
 // Adds the preset text to the drop-down before selection is made
 dropdown.append("<option disabled selected>Select your knowledge repository!</option>");
 
-// Determines the selected value from the drop-down and appneds it to the dropdown variable
+// Determines the user selected value from the drop-down and appends it to the dropdown variable
 for (value in knowledgeRepos.all)
     dropdown.append("<option value=\"" + value + "\">" + knowledgeRepos.keys[value] + "</option>");
 
@@ -253,13 +253,13 @@ var label = $("#travel_options_selection_label");
 // Drop-down starts with preset text and then appends the user selection by calling display function
 label.append("<select id=\"travel_options_selection_dropdown\" onchange=\"displaytTavelOptionsFrom(this)\"></select>");
 
-// Stores drop-down value
+// Variable for storing drop-down value
 var dropdown = $("#travel_options_selection_dropdown");
 
 // Adds the preset text to the drop-down before selection is made
 dropdown.append("<option disabled selected>Select your travel option!</option>");
 
-// Determines the selected value from the drop-down and appneds it to the dropdown variable
+// Determines the user selected value from the drop-down and appends it to the dropdown variable
 for (value in travelOptions.all)
     dropdown.append("<option value=\"" + value + "\">" + travelOptions.keys[value] + "</option>");
 
@@ -281,13 +281,13 @@ var label = $("#schedule_options_selection_label");
 // Drop-down starts with preset text and then appends the user selection by calling display function
 label.append("<select id=\"schedule_options_selection_dropdown\" onchange=\"displayScheduleOptionsFrom(this)\"></select>");
 
-// Stores drop-down value
+// Variable for storing drop-down value
 var dropdown = $("#schedule_options_selection_dropdown");
 
 // Adds the preset text to the drop-down before selection is made
 dropdown.append("<option disabled selected>Select your schedule availability!</option>");
 
-// Determines the selected value from the drop-down and appneds it to the dropdown variable
+// Determines the user selected value from the drop-down and appends it to the dropdown variable
 for (value in scheduleOptions.all)
     dropdown.append("<option value=\"" + value + "\">" + scheduleOptions.keys[value] + "</option>");
 
@@ -309,13 +309,13 @@ var label = $("#remote_work_selection_label");
 // Drop-down starts with preset text and then appends the user selection by calling display function
 label.append("<select id=\"remote_work_selection_dropdown\" onchange=\"displayRemoteWorkingFrom(this)\"></select>");
 
-// Stores drop-down value
+// Variable for storing drop-down value
 var dropdown = $("#remote_work_selection_dropdown");
 
 // Adds the preset text to the drop-down before selection is made
 dropdown.append("<option disabled selected>Select your remote work option!</option>");
 
-// Determines the selected value from the drop-down and appneds it to the dropdown variable
+// Determines the user selected value from the drop-down and appends it to the dropdown variable
 for (value in remoteWorking.all)
     dropdown.append("<option value=\"" + value + "\">" + remoteWorking.keys[value] + "</option>");
 
@@ -337,13 +337,13 @@ var label = $("#relocation_package_selection_label");
 // Drop-down starts with preset text and then appends the user selection by calling display function
 label.append("<select id=\"relocation_package_selection_dropdown\" onchange=\"displayRelocationPackagesFrom(this)\"></select>");
 
-// Stores drop-down value
+// Variable for storing drop-down value
 var dropdown = $("#relocation_package_selection_dropdown");
 
 // Adds the preset text to the drop-down before selection is made
 dropdown.append("<option disabled selected>Select your relocation package option!</option>");
 
-// Determines the selected value from the drop-down and appneds it to the dropdown variable
+// Determines the user selected value from the drop-down and appends it to the dropdown variable
 for (value in relocationPackages.all)
     dropdown.append("<option value=\"" + value + "\">" + relocationPackages.keys[value] + "</option>");
 
@@ -365,13 +365,13 @@ var label = $("#operating_system_selection_label");
 // Drop-down starts with preset text and then appends the user selection by calling display function
 label.append("<select id=\"operating_system_selection_dropdown\" onchange=\"displayOperationSystemsFrom(this)\"></select>");
 
-// Stores drop-down value
+// Variable for storing drop-down value
 var dropdown = $("#operating_system_selection_dropdown");
 
 // Adds the preset text to the drop-down before selection is made
 dropdown.append("<option disabled selected>Select your operating system!</option>");
 
-// Determines the selected value from the drop-down and appneds it to the dropdown variable
+// Determines the user selected value from the drop-down and appends it to the dropdown variable
 for (value in operationSystems.all)
     dropdown.append("<option value=\"" + value + "\">" + operationSystems.keys[value] + "</option>");
 
@@ -393,13 +393,13 @@ var label = $("#machine_type_selection_label");
 // Drop-down starts with preset text and then appends the user selection by calling display function
 label.append("<select id=\"machine_type_selection_dropdown\" onchange=\"displayMachineTypeFrom(this)\"></select>");
 
-// Stores drop-down value
+// Variable for storing drop-down value
 var dropdown = $("#machine_type_selection_dropdown");
 
 // Adds the preset text to the drop-down before selection is made
 dropdown.append("<option disabled selected>Select your machine type!</option>");
 
-// Determines the selected value from the drop-down and appneds it to the dropdown variable
+// Determines the user selected value from the drop-down and appends it to the dropdown variable
 for (value in machineType.all)
     dropdown.append("<option value=\"" + value + "\">" + machineType.keys[value] + "</option>");
 
@@ -421,13 +421,13 @@ var label = $("#monitor_selection_label");
 // Drop-down starts with preset text and then appends the user selection by calling display function
 label.append("<select id=\"monitor_selection_dropdown\" onchange=\"displayMonitorsFrom(this)\"></select>");
 
-// Stores drop-down value
+// Variable for storing drop-down value
 var dropdown = $("#monitor_selection_dropdown");
 
 // Adds the preset text to the drop-down before selection is made
 dropdown.append("<option disabled selected>Select your only monitor option!</option>");
 
-// Determines the selected value from the drop-down and appneds it to the dropdown variable
+// Determines the user selected value from the drop-down and appends it to the dropdown variable
 for (value in monitors.all)
     dropdown.append("<option value=\"" + value + "\">" + monitors.keys[value] + "</option>");
 
@@ -449,13 +449,13 @@ var label = $("#level_selection_label");
 // Drop-down starts with preset text and then appends the user selection by calling display function
 label.append("<select id=\"level_selection_dropdown\" onchange=\"displayLevelFrom(this)\"></select>");
 
-// Stores drop-down value
+// Variable for storing drop-down value
 var dropdown = $("#level_selection_dropdown");
 
 // Adds the preset text to the drop-down before selection is made
 dropdown.append("<option disabled selected>Select your level!</option>");
 
-// Determines the selected value from the drop-down and appneds it to the dropdown variable
+// Determines the user selected value from the drop-down and appends it to the dropdown variable
 for (value in level.all)
     dropdown.append("<option value=\"" + value + "\">" + level.keys[value] + "</option>");
 
@@ -477,13 +477,13 @@ var label = $("#training_type_selection_label");
 // Drop-down starts with preset text and then appends the user selection by calling display function
 label.append("<select id=\"training_type_selection_dropdown\" onchange=\"displayTrainingTypeFrom(this)\"></select>");
 
-// Stores drop-down value
+// Variable for storing drop-down value
 var dropdown = $("#training_type_selection_dropdown");
 
 // Adds the preset text to the drop-down before selection is made
 dropdown.append("<option disabled selected>Select your training type!</option>");
 
-// Determines the selected value from the drop-down and appneds it to the dropdown variable
+// Determines the user selected value from the drop-down and appends it to the dropdown variable
 for (value in trainingType.all)
     dropdown.append("<option value=\"" + value + "\">" + trainingType.keys[value] + "</option>");
 
@@ -505,13 +505,13 @@ var label = $("#pto_selection_label");
 // Drop-down starts with preset text and then appends the user selection by calling display function
 label.append("<select id=\"pto_selection_dropdown\" onchange=\"displayPaidTimeOffFrom(this)\"></select>");
 
-// Stores drop-down value
+// Variable for storing drop-down value
 var dropdown = $("#pto_selection_dropdown");
 
 // Adds the preset text to the drop-down before selection is made
 dropdown.append("<option disabled selected>Select your PTO option!</option>");
 
-// Determines the selected value from the drop-down and appneds it to the dropdown variable
+// Determines the user selected value from the drop-down and appends it to the dropdown variable
 for (value in paidTimeOff.all)
     dropdown.append("<option value=\"" + value + "\">" + paidTimeOff.keys[value] + "</option>");
 
@@ -525,7 +525,7 @@ function displayPaidTimeOffFrom(dropdown)
 
 // This function is designed to make sure that every drop-down has been answered. 
 // Rather than use a simple loop with a blanket alert message I made a bunch of if statements so I could create a unique message that specifies which drop-down wasn't selected
-function checkAnsweredAll() {
+function checkAnswers() {
   if (user.employment_answer == "") {
     alert("Please select an employment answer")
     return
@@ -599,24 +599,13 @@ function checkAnsweredAll() {
     return
   }else {
     compareUserToJob()
-    alert("your match percent is " + numberOfMatches/18)
+    alert("You are a " + Math.round((numberOfMatches/18)) + "% match for our front-end developer job")
     console.log('everything is filled out')
   }
-  console.log("function is working")
+}
 
-
-  function matchPercent() {
-    var matches = compareUserToJob(numberOfMatches) % 18
-    console.log(matchPercent)
-  }
-  // if (numberOfMatches > 0) {
-  //   var matchPercent = numberOfMatches % 18
-  //   console.log(matchPercent)
-  }
-
-  // console.log(compareUserToJob(numberOfMatches))
-  console.log("function is still working")
-
+// Variable for storing the number of selected drop-down answers that match 
+var numberOfMatches = 0;
 
 //This function is designed to determine if the selected answers match prerequisites for the position
 function compareUserToJob() {
@@ -693,9 +682,6 @@ function compareUserToJob() {
     console.log(numberOfMatches)
   }
 }
-
-// Variable for storing the number of selected drop-down answers that match 
-var numberOfMatches = 0;
 
 // Original Gridium code
 var job = {
