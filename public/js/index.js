@@ -599,13 +599,43 @@ function checkAnswers() {
     return
   }else {
     compareUserToJob()
-    alert("You are a " + Math.round((numberOfMatches/18)) + "% match for our front-end developer job")
-    console.log('everything is filled out')
+    matchPercent = (numberOfMatches/18);
+    matchPercent = matchPercent.toString();
+    var a = matchPercent.split(".");
+    matchPercent = a[1];
+    matchPercent = matchPercent.substr(0, 4);
+    matchPercent = (matchPercent / 100) + "%";
+    console.log(matchPercent)
+    if (parseInt(matchPercent) > 80) {
+
+      // Using an alert is obviously not the most elegant solution. 
+      alert("Amazing! You are a " + matchPercent + " match for our front-end developer job at Gridium! You should definitely apply!")
+      return
+      numberOfMatches = 0;
+    }
+    if (parseInt(matchPercent) > 60) {
+      alert("Alright! You are a " + matchPercent + " match for our front-end developer job at Gridium! You should apply.")
+      numberOfMatches = 0;
+      return
+    }
+    if (parseInt(matchPercent) > 49) {
+      alert("Not bad. You are a " + matchPercent + " match for our front-end developer job at Gridium. You should think about applying.")
+      numberOfMatches = 0;
+      return
+    }
+    if (parseInt(matchPercent) < 49) {
+      alert("Hmm. You are a " + matchPercent + " match for our front-end developer job at Gridium. Pehaps you should consider whether this would be the best fit for your needs.")
+      numberOfMatches = 0;
+      return
+    }
   }
 }
 
 // Variable for storing the number of selected drop-down answers that match 
 var numberOfMatches = 0;
+
+// Variable for storing the percentage that user answer match the prerequisites
+var matchPercent = Math.round((numberOfMatches/18))
 
 //This function is designed to determine if the selected answers match prerequisites for the position
 function compareUserToJob() {
